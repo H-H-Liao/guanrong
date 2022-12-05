@@ -1,0 +1,18 @@
+<?php
+
+namespace TypiCMS\Modules\Socialbuttons\Http\Requests;
+
+use TypiCMS\Modules\Core\Http\Requests\AbstractFormRequest;
+
+class FormRequest extends AbstractFormRequest
+{
+    public function rules()
+    {
+        return [
+            'title.*' => 'nullable|max:255',
+            'status.*' => 'boolean',
+            'icon.*' => 'nullable|max:255',
+            'link.*' => 'nullable|max:255',
+        ];
+    }
+}
